@@ -1,7 +1,6 @@
 import React from 'react';
 import './AddItems.css';
 
-
 interface AddItemsProps {
     id: string;
     image: string;
@@ -10,6 +9,7 @@ interface AddItemsProps {
     price:number;
     onAddItems:React.MouseEventHandler;
 }
+
 const AddItems: React.FC<AddItemsProps> = ({
     image,
     name    ,
@@ -23,7 +23,8 @@ const AddItems: React.FC<AddItemsProps> = ({
             <div className={"Items-info"}>
                 <span className={"Item-name"}>{name}</span>
                 <span className={"Item-count"}>x{count}</span>
-                <span className={"Item-price"}>Price {price} KGS</span></div>
+                <span className={"Item-price"}>Price {price} KGS</span>
+            </div>
         </div>
     );
 };

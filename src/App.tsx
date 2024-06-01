@@ -49,9 +49,13 @@ const App = () => {
         });
     };
 
+    const totalPrice=items.reduce((acc,i)=> {
+        return acc + i.price * i.count;
+    },0);
+
     return (
         <div className="container">
-            <OrderDetails items={items} onRemoveItem={removeItem} />
+            <OrderDetails items={items}  totalPrice={totalPrice} onRemoveItem={removeItem} />
             <div className="items-list">
                 {items.map(item => (
                     <AddItems

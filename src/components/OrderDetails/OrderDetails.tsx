@@ -11,10 +11,11 @@ interface Item {
 
 interface OrderDetailsProps {
     items: Item[];
+    totalPrice: number;
     onRemoveItem: (id: string) => void;
 }
 
-const OrderDetails: React.FC<OrderDetailsProps> = ({ items, onRemoveItem }) => {
+const OrderDetails: React.FC<OrderDetailsProps> = ({ items, totalPrice, onRemoveItem }) => {
 
     const ItemPrice = (item: Item): number => {
         return item.price * item.count;
@@ -31,9 +32,9 @@ const OrderDetails: React.FC<OrderDetailsProps> = ({ items, onRemoveItem }) => {
                                 <button className="order-Add-info-button-remove" onClick={() => onRemoveItem(item.id)}>Удалить</button>
                             </div>
                         ))}
+                    <span className="total-price">Total price: {totalPrice} KGS</span>
                 </div>
             </div>
-
     );
 };
 
