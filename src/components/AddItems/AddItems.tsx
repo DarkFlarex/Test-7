@@ -5,7 +5,6 @@ interface AddItemsProps {
     id: string;
     image: string;
     name:string;
-    count:number;
     price:number;
     onAddItems:React.MouseEventHandler;
 }
@@ -13,7 +12,6 @@ interface AddItemsProps {
 const AddItems: React.FC<AddItemsProps> = ({
     image,
     name    ,
-    count,
     price,
     onAddItems
 }) => {
@@ -22,7 +20,6 @@ const AddItems: React.FC<AddItemsProps> = ({
             <img src={image} alt={name} className="Item-image"/>
             <div className={"Items-info"}>
                 <span className={"Item-name"}>{name}</span>
-                <span className={"Item-count"}>x{count}</span>
                 <span className={"Item-price"}>Price {price} KGS</span>
             </div>
         </div>

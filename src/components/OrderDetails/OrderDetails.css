@@ -2,19 +2,41 @@
     border: 1px solid silver;
     border-radius: 5px;
     padding: 20px;
+    background-color: #717B7F;
+}
+
+.order-details-empty {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #918981;
 }
 
 .order-Add-info{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border: 1px solid silver;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 25px;
+    background-color: #918981;
 }
 
 .order-Add-info-price,
 .order-Add-info-count,
 .order-Add-info-name{
     margin-right: 20px;
+}
+
+.order-Add-info-button-remove{
+    padding: 10px 25px;
+    background-color: #9FA4A3;
+    border-radius: 10px;
+}
+
+.order-Add-info-button-remove:active{
+    background-color: #D0CDC9;
 }

@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import AddItems from "./components/AddItems/AddItems";
-import drinkImage from './assets/drink.png';
+import colaImage from './assets/cola.png';
+import teaImage from './assets/tea.png';
+import coffeImage from './assets/coffe.png';
 import burgerImage from './assets/burger.png';
 import freeImage from './assets/free.png';
 import burgerCheeseImage from './assets/burgerCheese.png';
 import OrderDetails from "./components/OrderDetails/OrderDetails";
-
-
 
 interface Item {
     id: string;
@@ -22,9 +22,9 @@ const App = () => {
         { id: '1', name: 'Hamburger', count: 0, price: 80, image: burgerImage },
         { id: '2', name: 'Cheeseburger', count: 0, price: 90, image: burgerCheeseImage },
         { id: '3', name: 'Fries', count: 0, price: 45, image: freeImage },
-        { id: '4', name: 'Coffee', count: 0, price: 70, image: drinkImage },
-        { id: '5', name: 'Tea', count: 0, price: 50, image: drinkImage },
-        { id: '6', name: 'Cola', count: 0, price: 40, image: drinkImage },
+        { id: '4', name: 'Coffee', count: 0, price: 70, image: coffeImage },
+        { id: '5', name: 'Tea', count: 0, price: 50, image: teaImage },
+        { id: '6', name: 'Cola', count: 0, price: 40, image: colaImage },
     ]);
 
     const addItem = (id: string) => {
@@ -48,7 +48,6 @@ const App = () => {
             });
         });
     };
-
     const totalPrice=items.reduce((acc,i)=> {
         return acc + i.price * i.count;
     },0);
@@ -64,7 +63,6 @@ const App = () => {
                         image={item.image}
                         onAddItems={() => addItem(item.id)}
                         name={item.name}
-                        count={item.count}
                         price={item.price}
                     />
                 ))}

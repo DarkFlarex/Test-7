@@ -4,6 +4,7 @@
     margin-right: 10px;
     padding: 5px;
 }
+
 .Items{
     display: flex;
     align-items: center;
@@ -12,22 +13,24 @@
     cursor: pointer;
     border: 1px solid silver;
     border-radius: 35px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    background-color: #918981;
 }
 
 .Items-info{
     display: flex;
     flex-direction: column;
 }
+
 .Item-name,
-.Item-count,
 .Item-price {
     margin-right: 15px;
+    margin-bottom: 10px;
     color: black;
 }
 
 .Items:active{
-    background-color: lightgray;
+    background-color:  #D0CDC9;
     border-color: darkgray;
     transform: scale(0.9);
 }
