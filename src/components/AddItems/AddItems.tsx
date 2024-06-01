@@ -23,7 +23,7 @@ const AddItems: React.FC<AddItemsProps> = ({
             <div className={"Items-info"}>
                 <span className={"Item-name"}>{name}</span>
                 <span className={"Item-count"}>x{count}</span>
-                <span className={"Item-price"}>Price {price} Сом</span></div>
+                <span className={"Item-price"}>Price {price} KGS</span></div>
         </div>
     );
 };
